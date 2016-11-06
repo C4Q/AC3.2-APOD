@@ -20,22 +20,17 @@ class ViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var videoPlayer: UIWebView!
     
-    
     var usersDatePick: String = ""
-    
-
-    
-    
     
     
     @IBAction func datePickerAction(_ sender: UIDatePicker) {
         
+        videoPlayer.isHidden = true
         datePicker.maximumDate = NSDate() as Date
         datePicker.backgroundColor = UIColor.gray
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let strDate = dateFormatter.string(from: datePicker.date)
-        print(strDate)
         self.usersDatePick = strDate
         //self.dateLabel.text = strDate
         loadDatafromUsersChoice()
@@ -46,11 +41,17 @@ class ViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-        print(pics)
         videoPlayer.isHidden = true
-        datePicker.backgroundColor = UIColor.gray
+        datePicker.backgroundColor = UIColor.lightGray
         
     }
+    
+    
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        videoPlayer.backgroundColor = UIColor.clear
+    }
+    
+ 
     
     
     
@@ -68,7 +69,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
             
             DispatchQueue.main.async {
                 self.dateLabel.reloadInputViews()
-                self.dateLabel.text = "Caption: \(self.pics.title)"
+                self.dateLabel.text = self.pics.title
                 if self.pics.media == "image" {
                     self.videoPlayer.isHidden = true
                     self.pickOfTheDay.isHidden = false
@@ -78,6 +79,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
                 } else if self.pics.media == "video" {
                     self.pickOfTheDay.isHidden = true
                     self.videoPlayer.isHidden = false
+                    self.videoPlayer.backgroundColor = UIColor.clear
                     self.videoPlayer.allowsInlineMediaPlayback = true
                     let webUrl : URL = URL(string: "\(self.pics.url)")!
                     let webRequest : URLRequest = URLRequest(url: webUrl)
