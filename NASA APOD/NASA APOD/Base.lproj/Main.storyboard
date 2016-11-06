@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NASA_APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gen-jT-BP2">
+                                <rect key="frame" x="24" y="28" width="327" height="369"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bud-Hs-P8H">
+                                <rect key="frame" x="24" y="405" width="42" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZLW-sd-N0d">
+                                <rect key="frame" x="8" y="443" width="359" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="500148357.21924001">
+                                    <!--2016-11-06 18:05:57 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-166543200">
+                                    <!--1995-09-22 10:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="apodDatePickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1Ty-5P-c5G"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-5M-GaV">
+                                <rect key="frame" x="305" y="405" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="zoY-b2-8wb"/>
+                                </constraints>
+                                <state key="normal" title="Video"/>
+                                <connections>
+                                    <action selector="videoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="poH-W9-Zjd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZLW-sd-N0d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="5gz-w6-a29"/>
+                            <constraint firstItem="ZLW-sd-N0d" firstAttribute="top" secondItem="hbc-5M-GaV" secondAttribute="bottom" constant="8" id="AWo-e4-K5H"/>
+                            <constraint firstItem="hbc-5M-GaV" firstAttribute="top" secondItem="Gen-jT-BP2" secondAttribute="bottom" constant="8" id="FGX-uw-8B2"/>
+                            <constraint firstItem="Gen-jT-BP2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Hwo-PE-ZYj"/>
+                            <constraint firstItem="ZLW-sd-N0d" firstAttribute="top" secondItem="bud-Hs-P8H" secondAttribute="bottom" constant="8" id="O9w-Eg-tTE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZLW-sd-N0d" secondAttribute="bottom" constant="8" id="TaJ-kU-2ma"/>
+                            <constraint firstItem="bud-Hs-P8H" firstAttribute="top" secondItem="Gen-jT-BP2" secondAttribute="bottom" constant="8" id="edh-nO-1te"/>
+                            <constraint firstAttribute="trailing" secondItem="ZLW-sd-N0d" secondAttribute="trailing" constant="8" id="ffB-Wp-RnI"/>
+                            <constraint firstItem="bud-Hs-P8H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="hhm-nu-HNu"/>
+                            <constraint firstItem="Gen-jT-BP2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="ixn-H7-iiS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gen-jT-BP2" secondAttribute="trailing" constant="8" id="qjn-ih-ei4"/>
+                            <constraint firstItem="hbc-5M-GaV" firstAttribute="trailing" secondItem="Gen-jT-BP2" secondAttribute="trailing" id="xaB-ci-3BM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="apodDatePicker" destination="ZLW-sd-N0d" id="20N-IQ-tjy"/>
+                        <outlet property="apodImageView" destination="Gen-jT-BP2" id="N8d-U8-Q2K"/>
+                        <outlet property="titleLabel" destination="bud-Hs-P8H" id="kbn-LP-7KB"/>
+                        <outlet property="videoButton" destination="hbc-5M-GaV" id="c9Q-JR-fyI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
