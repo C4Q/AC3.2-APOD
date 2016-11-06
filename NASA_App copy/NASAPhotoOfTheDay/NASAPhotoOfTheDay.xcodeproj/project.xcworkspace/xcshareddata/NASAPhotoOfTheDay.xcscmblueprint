@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E74EC983CA7E4E6BC718C45DA04D12EAEB112036",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E74EC983CA7E4E6BC718C45DA04D12EAEB112036" : 9223372036854775807,
+    "34C99EC4657D730267A707C2FE7D9CC7F83D83B6" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "41C80C6B-0C3D-4FF2-9110-E1774C84AC7A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E74EC983CA7E4E6BC718C45DA04D12EAEB112036" : "AC3.2-APOD\/",
+    "34C99EC4657D730267A707C2FE7D9CC7F83D83B6" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NASAPhotoOfTheDay",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NASA_App copy\/NASAPhotoOfTheDay\/NASAPhotoOfTheDay.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/defintuition\/Battleship.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "34C99EC4657D730267A707C2FE7D9CC7F83D83B6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/defintuition\/AC3.2-APOD.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E74EC983CA7E4E6BC718C45DA04D12EAEB112036"
+    }
+  ]
+}
