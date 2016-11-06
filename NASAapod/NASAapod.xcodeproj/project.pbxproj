@@ -12,6 +12,8 @@
 		E383578D1DCEEECE0099800A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E383578B1DCEEECE0099800A /* Main.storyboard */; };
 		E383578F1DCEEECE0099800A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E383578E1DCEEECE0099800A /* Assets.xcassets */; };
 		E38357921DCEEECE0099800A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38357901DCEEECE0099800A /* LaunchScreen.storyboard */; };
+		E383579B1DCEEFEF0099800A /* Apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E383579A1DCEEFEF0099800A /* Apod.swift */; };
+		E383579D1DCEF0240099800A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E383579C1DCEF0240099800A /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E383578E1DCEEECE0099800A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E38357911DCEEECE0099800A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E38357931DCEEECE0099800A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E383579A1DCEEFEF0099800A /* Apod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apod.swift; sourceTree = "<group>"; };
+		E383579C1DCEF0240099800A /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		E38357861DCEEECE0099800A /* NASAapod */ = {
 			isa = PBXGroup;
 			children = (
-				E38357871DCEEECE0099800A /* AppDelegate.swift */,
 				E38357891DCEEECE0099800A /* ViewController.swift */,
+				E383579E1DCEF3B80099800A /* Model */,
+				E383579F1DCEF3C50099800A /* Manager */,
+				E38357991DCEEFD60099800A /* Support Files */,
+			);
+			path = NASAapod;
+			sourceTree = "<group>";
+		};
+		E38357991DCEEFD60099800A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E38357871DCEEECE0099800A /* AppDelegate.swift */,
 				E383578B1DCEEECE0099800A /* Main.storyboard */,
 				E383578E1DCEEECE0099800A /* Assets.xcassets */,
 				E38357901DCEEECE0099800A /* LaunchScreen.storyboard */,
 				E38357931DCEEECE0099800A /* Info.plist */,
 			);
-			path = NASAapod;
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		E383579E1DCEF3B80099800A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E383579A1DCEEFEF0099800A /* Apod.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E383579F1DCEF3C50099800A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E383579C1DCEF0240099800A /* APIManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E383579D1DCEF0240099800A /* APIManager.swift in Sources */,
+				E383579B1DCEEFEF0099800A /* Apod.swift in Sources */,
 				E383578A1DCEEECE0099800A /* ViewController.swift in Sources */,
 				E38357881DCEEECE0099800A /* AppDelegate.swift in Sources */,
 			);

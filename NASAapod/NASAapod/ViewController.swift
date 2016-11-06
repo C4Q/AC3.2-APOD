@@ -9,17 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var allApods = [Apod]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        APIRequestManager.manager.getData(endPoint: Apod.endpoint) { (data: Data?) in
+            if data != nil {
+                if let validData = data,
+                    let validApod = Apod.getApodData(from: validData) {
+                    self.allApods = validApod
+                    DispatchQueue.main.async {
+                        self.tableView?.reloadData()
+                        print("Apod array: \(self.allApods)")
+                    }
+                }
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    
+    
 }
 
