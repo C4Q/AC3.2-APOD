@@ -54,7 +54,7 @@ class ViewController: UIViewController {
                     } else {
                         self.explanationLabel?.text = "A picture does not exist for this day"
                     }
-
+                    
                 }
             }
         }
@@ -65,10 +65,10 @@ class ViewController: UIViewController {
             APIRequestManager.manager.getData(endpoint: existingImage) { (data) in
                 if let validData = data {
                     DispatchQueue.main.async {
-                    if let validImage = UIImage(data: validData) {
+                        if let validImage = UIImage(data: validData) {
                             self.apodImage.image = validImage
-                    } else {
-                        self.videoLinkTextView.text = existingImage
+                        } else {
+                            self.videoLinkTextView.text = existingImage
                         }
                     }
                 }
@@ -81,7 +81,6 @@ class ViewController: UIViewController {
         self.apodImage.image = nil
         self.explanationLabel.text = nil
         self.videoLinkTextView.text = nil
-        //self.apodImage.reloadInputViews()
     }
     
 }
