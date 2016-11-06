@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McJ-r8-1JS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McJ-r8-1JS">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="azZ-zX-O6R"/>
                                 </constraints>
@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="height" constant="225" id="xXV-8J-BXc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="JDA-1c-ahe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="JDA-1c-ahe">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="169" id="0GX-44-Mbs"/>
                                     <constraint firstAttribute="width" constant="327" id="exX-0x-yGe"/>
@@ -53,13 +53,27 @@
                                     <action selector="datePickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="7be-YU-Fzw"/>
                                 </connections>
                             </datePicker>
+                            <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmP-gz-pph">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASA Astronomy Pic of the Day" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIi-8F-6Cm">
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="gmP-gz-pph" firstAttribute="top" secondItem="lIi-8F-6Cm" secondAttribute="bottom" constant="18" id="3rA-M8-Cej"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JDA-1c-ahe" secondAttribute="trailing" constant="8" id="5eA-F4-37j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gmP-gz-pph" secondAttribute="trailing" constant="4" id="C0I-Yx-Prd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Iaa-Io-NDa" secondAttribute="trailing" constant="4" id="DkG-Z7-lQ9"/>
                             <constraint firstItem="Iaa-Io-NDa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="F96-XM-M1m"/>
+                            <constraint firstItem="gmP-gz-pph" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="GIk-gm-4OC"/>
                             <constraint firstItem="JDA-1c-ahe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="JQO-f8-hrh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lIi-8F-6Cm" secondAttribute="trailing" constant="4" id="Lxj-Ih-Twu"/>
+                            <constraint firstItem="gmP-gz-pph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="M5P-uz-FN8"/>
+                            <constraint firstItem="lIi-8F-6Cm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="OhB-Pu-Sf1"/>
                             <constraint firstItem="McJ-r8-1JS" firstAttribute="top" secondItem="Iaa-Io-NDa" secondAttribute="bottom" constant="8" id="Ose-y8-xUr"/>
                             <constraint firstItem="McJ-r8-1JS" firstAttribute="top" secondItem="Iaa-Io-NDa" secondAttribute="bottom" constant="8" id="Xst-wk-grX"/>
                             <constraint firstAttribute="trailing" secondItem="Rgo-Fy-PBC" secondAttribute="trailing" id="e6w-RC-e4k"/>
@@ -68,6 +82,8 @@
                             <constraint firstItem="McJ-r8-1JS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="jIg-0y-qCN"/>
                             <constraint firstItem="Iaa-Io-NDa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="lUJ-Xk-RKY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="McJ-r8-1JS" secondAttribute="trailing" constant="8" id="lnT-Kp-7SR"/>
+                            <constraint firstItem="McJ-r8-1JS" firstAttribute="top" secondItem="gmP-gz-pph" secondAttribute="bottom" constant="8" id="lxM-3R-aLf"/>
+                            <constraint firstItem="lIi-8F-6Cm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="rEm-M0-ucP"/>
                             <constraint firstItem="Rgo-Fy-PBC" firstAttribute="top" secondItem="JDA-1c-ahe" secondAttribute="bottom" constant="8" id="tGz-Lc-bzH"/>
                             <constraint firstItem="Rgo-Fy-PBC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vpo-1z-qSt"/>
                             <constraint firstItem="Iaa-Io-NDa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="xLs-6l-1YW"/>
@@ -78,6 +94,7 @@
                         <outlet property="datePicker" destination="Rgo-Fy-PBC" id="viJ-C4-TBQ"/>
                         <outlet property="pickOfTheDay" destination="Iaa-Io-NDa" id="Xwa-mW-K7s"/>
                         <outlet property="summaryLabel" destination="JDA-1c-ahe" id="tuZ-so-Kwo"/>
+                        <outlet property="videoPlayer" destination="gmP-gz-pph" id="LvQ-8P-oAS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

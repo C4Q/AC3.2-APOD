@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIWebViewDelegate {
     
     var pics: nasaPicture = nasaPicture(date: "", summary: "", media: "", title: "", url: "")
     
@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var pickOfTheDay: UIImageView!
     @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var videoPlayer: UIWebView!
+    
     
     var usersDatePick: String = ""
     
@@ -29,7 +31,7 @@ class ViewController: UIViewController {
     @IBAction func datePickerAction(_ sender: UIDatePicker) {
         
         datePicker.maximumDate = NSDate() as Date
-        datePicker.backgroundColor = UIColor.white
+        datePicker.backgroundColor = UIColor.gray
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let strDate = dateFormatter.string(from: datePicker.date)
@@ -45,7 +47,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         loadData()
         print(pics)
-        datePicker.backgroundColor = UIColor.white
+        videoPlayer.isHidden = true
+        datePicker.backgroundColor = UIColor.gray
         
     }
     
@@ -67,9 +70,18 @@ class ViewController: UIViewController {
                 self.dateLabel.reloadInputViews()
                 self.dateLabel.text = "Caption: \(self.pics.title)"
                 if self.pics.media == "image" {
+                    self.videoPlayer.isHidden = true
+                    self.pickOfTheDay.isHidden = false
                     let url = URL(string: self.pics.url)
-                    let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+                    let data = try? Data(contentsOf: url!)
                     self.pickOfTheDay.image = UIImage(data: data!)
+                } else if self.pics.media == "video" {
+                    self.pickOfTheDay.isHidden = true
+                    self.videoPlayer.isHidden = false
+                    self.videoPlayer.allowsInlineMediaPlayback = true
+                    let webUrl : URL = URL(string: "\(self.pics.url)")!
+                    let webRequest : URLRequest = URLRequest(url: webUrl)
+                    self.videoPlayer.loadRequest(webRequest)
                     
                 }
                 self.summaryLabel.text = self.pics.summary
@@ -93,9 +105,18 @@ class ViewController: UIViewController {
                 self.dateLabel.reloadInputViews()
                 self.dateLabel.text = "Caption: \(self.pics.title)"
                 if self.pics.media == "image" {
+                    self.videoPlayer.isHidden = true
+                    self.pickOfTheDay.isHidden = false
                     let url = URL(string: self.pics.url)
-                    let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+                    let data = try? Data(contentsOf: url!)
                     self.pickOfTheDay.image = UIImage(data: data!)
+                } else if self.pics.media == "video" {
+                    self.pickOfTheDay.isHidden = true
+                    self.videoPlayer.isHidden = false
+                    self.videoPlayer.allowsInlineMediaPlayback = true
+                    let webUrl : URL = URL(string: "\(self.pics.url)")!
+                    let webRequest : URLRequest = URLRequest(url: webUrl)
+                    self.videoPlayer.loadRequest(webRequest)
                     
                 }
                 self.summaryLabel.text = self.pics.summary

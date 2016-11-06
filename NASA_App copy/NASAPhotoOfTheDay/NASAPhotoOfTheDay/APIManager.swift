@@ -18,6 +18,8 @@ class APIManager {
     let apiEndPointString: String = "https://api.nasa.gov/planetary/apod?api_key=yC5ugtNAp2oIp5MQHbLYy2h0ni2283p6rK6Cx2iK"
     
     
+    
+    
     func getData(callback: @escaping ((Data?) -> Void)) {
         
         let currentUrlSession = URLSession(configuration: URLSessionConfiguration.default)
