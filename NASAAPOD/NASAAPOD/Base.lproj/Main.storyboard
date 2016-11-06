@@ -50,6 +50,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="500075066.39078999">
                                     <!--2016-11-05 21:44:26 +0000-->
                                 </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-166543200">
+                                    <!--1995-09-22 10:00:00 +0000-->
+                                </date>
                                 <connections>
                                     <action selector="datePicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="8nO-DB-3ZV"/>
                                 </connections>
