@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     }
     
     func getDateString() -> String {
-        /* figure out way to set earliest and latest date */
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter.string(from: datePicker.date)
@@ -33,6 +32,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        datePicker.maximumDate = Date()
         loadData()
     }
     
@@ -46,9 +46,11 @@ class ViewController: UIViewController {
             if let validData = data {
                 self.apod = Apod.getDataFromJson(data: validData)
                 DispatchQueue.main.async {
-                    self.loadImage()
-                    if let explanationExists = self.apod?.explanation {
-                        self.explanationLabel.text = explanationExists
+                    if self.apod != nil {
+                        self.loadImage()
+                        if let explanationExists = self.apod?.explanation {
+                            self.explanationLabel.text = explanationExists
+                        }
                     } else {
                         self.explanationLabel?.text = "A picture does not exist for this day"
                     }
@@ -60,18 +62,15 @@ class ViewController: UIViewController {
     
     func loadImage() {
         if let existingImage = apod?.imageUrlString {
-            self.videoLinkTextView.text = existingImage
             APIRequestManager.manager.getData(endpoint: existingImage) { (data) in
                 if let validData = data {
+                    DispatchQueue.main.async {
                     if let validImage = UIImage(data: validData) {
-                        DispatchQueue.main.async {
                             self.apodImage.image = validImage
-                            self.videoLinkTextView.isHidden = true
+                    } else {
+                        self.videoLinkTextView.text = existingImage
                         }
                     }
-//                    else {
-//                        self.videoLinkTextView.isHidden = false
-//                    }
                 }
             }
         }
@@ -82,7 +81,7 @@ class ViewController: UIViewController {
         self.apodImage.image = nil
         self.explanationLabel.text = nil
         self.videoLinkTextView.text = nil
-        self.videoLinkTextView.isHidden = false
+        //self.apodImage.reloadInputViews()
     }
     
 }
