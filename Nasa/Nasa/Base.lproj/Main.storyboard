@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nasa View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NasaViewController" customModule="Unit3NasaHW" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xCb-c5-vnT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="2e0-F8-ryF"/>
+                                    <constraint firstAttribute="height" constant="245" id="aoy-xV-gi2"/>
+                                </constraints>
+                            </imageView>
+                            <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="o6x-Kb-LwN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="QcR-fN-ptE"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="500056885.98818702">
+                                    <!--2016-11-05 16:41:25 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePick:" destination="BYZ-38-t0r" eventType="valueChanged" id="QTP-xk-X53"/>
+                                </connections>
+                            </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gfV-nR-vdO">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="o6x-Kb-LwN" secondAttribute="trailing" id="5ly-AY-uGB"/>
+                            <constraint firstItem="o6x-Kb-LwN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KPb-oV-D1s"/>
+                            <constraint firstAttribute="trailing" secondItem="xCb-c5-vnT" secondAttribute="trailing" id="L57-BM-gaQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gfV-nR-vdO" secondAttribute="trailing" id="O7d-DU-Ry9"/>
+                            <constraint firstItem="o6x-Kb-LwN" firstAttribute="top" secondItem="gfV-nR-vdO" secondAttribute="bottom" constant="10" id="PzH-52-6jG"/>
+                            <constraint firstItem="gfV-nR-vdO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SVw-kg-onX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o6x-Kb-LwN" secondAttribute="bottom" id="YTI-uW-tGB"/>
+                            <constraint firstItem="xCb-c5-vnT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eko-bU-LKl"/>
+                            <constraint firstItem="gfV-nR-vdO" firstAttribute="top" secondItem="xCb-c5-vnT" secondAttribute="bottom" constant="8" id="vHT-wF-wek"/>
+                            <constraint firstItem="xCb-c5-vnT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zXX-zc-bgP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePickerOutlet" destination="o6x-Kb-LwN" id="qoI-9x-x9l"/>
+                        <outlet property="imageOfTheDay" destination="xCb-c5-vnT" id="aru-6z-buG"/>
+                        <outlet property="textView" destination="gfV-nR-vdO" id="VPY-H5-djm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="83.208395802098963"/>
+        </scene>
+    </scenes>
+</document>
