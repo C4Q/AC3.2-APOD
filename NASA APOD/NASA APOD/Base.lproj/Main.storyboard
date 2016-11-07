@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nasa View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NasaViewController" customModule="NASA_APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ju4-Ie-uzG"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="v5D-Yz-nLo">
+                                <date key="date" timeIntervalSinceReferenceDate="500166197.21561301">
+                                    <!--2016-11-06 23:03:17 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TEX-Ze-PKT"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0U3-Ug-2aK">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0U3-Ug-2aK" firstAttribute="leading" secondItem="Ju4-Ie-uzG" secondAttribute="leading" id="1gd-2Y-vS5"/>
+                            <constraint firstAttribute="trailing" secondItem="v5D-Yz-nLo" secondAttribute="trailing" id="6iA-zJ-4a8"/>
+                            <constraint firstItem="Ju4-Ie-uzG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ACO-Qu-c3h"/>
+                            <constraint firstItem="Ju4-Ie-uzG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Adn-mI-hlf"/>
+                            <constraint firstItem="v5D-Yz-nLo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KZC-NH-AjC"/>
+                            <constraint firstItem="0U3-Ug-2aK" firstAttribute="trailing" secondItem="Ju4-Ie-uzG" secondAttribute="trailing" id="U5I-Qz-Xnd"/>
+                            <constraint firstItem="0U3-Ug-2aK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Upc-25-jMP"/>
+                            <constraint firstItem="0U3-Ug-2aK" firstAttribute="top" secondItem="Ju4-Ie-uzG" secondAttribute="bottom" id="fEO-X8-AAC"/>
+                            <constraint firstItem="0U3-Ug-2aK" firstAttribute="top" secondItem="Ju4-Ie-uzG" secondAttribute="bottom" id="h26-a8-uJ2"/>
+                            <constraint firstItem="Ju4-Ie-uzG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jJ7-HY-8vN"/>
+                            <constraint firstItem="v5D-Yz-nLo" firstAttribute="top" secondItem="0U3-Ug-2aK" secondAttribute="bottom" id="lfA-SD-2AK"/>
+                            <constraint firstItem="0U3-Ug-2aK" firstAttribute="centerX" secondItem="v5D-Yz-nLo" secondAttribute="centerX" id="liH-dT-ogv"/>
+                            <constraint firstItem="0U3-Ug-2aK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qnT-NM-pks"/>
+                            <constraint firstAttribute="bottom" secondItem="0U3-Ug-2aK" secondAttribute="bottom" constant="224" id="tgV-XX-Czx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v5D-Yz-nLo" secondAttribute="bottom" id="xVv-eD-dOl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="v5D-Yz-nLo" id="Eye-g5-cuX"/>
+                        <outlet property="image" destination="Ju4-Ie-uzG" id="elk-tD-QBs"/>
+                        <outlet property="label" destination="0U3-Ug-2aK" id="cHt-Z8-yyX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
