@@ -27,7 +27,6 @@ class ViewController: UIViewController, UIWebViewDelegate {
         
         videoPlayer.isHidden = true
         datePicker.maximumDate = NSDate() as Date
-        datePicker.backgroundColor = UIColor.gray
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let strDate = dateFormatter.string(from: datePicker.date)
@@ -42,7 +41,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
         super.viewDidLoad()
         loadData()
         videoPlayer.isHidden = true
-        datePicker.backgroundColor = UIColor.lightGray
+        datePicker.backgroundColor = UIColor.black
+        datePicker.setValue(UIColor.gray, forKeyPath: "textColor")
+        
         
     }
     
@@ -81,7 +82,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
                     self.videoPlayer.isHidden = false
                     self.videoPlayer.backgroundColor = UIColor.clear
                     self.videoPlayer.allowsInlineMediaPlayback = true
-                    let webUrl : URL = URL(string: "\(self.pics.url)")!
+                    let webUrl : URL = URL(string: self.pics.url)!
                     let webRequest : URLRequest = URLRequest(url: webUrl)
                     self.videoPlayer.loadRequest(webRequest)
                     

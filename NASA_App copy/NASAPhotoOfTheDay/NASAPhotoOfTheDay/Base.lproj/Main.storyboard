@@ -28,7 +28,7 @@
                                 <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="Iaa-Io-NDa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iaa-Io-NDa">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Iaa-Io-NDa" secondAttribute="height" multiplier="112:75" id="er3-p2-P4M"/>
                                     <constraint firstAttribute="width" constant="336" id="sXP-yb-eNs"/>
@@ -62,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gmP-gz-pph" firstAttribute="top" secondItem="lIi-8F-6Cm" secondAttribute="bottom" constant="18" id="3rA-M8-Cej"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JDA-1c-ahe" secondAttribute="trailing" constant="8" id="5eA-F4-37j"/>
@@ -102,7 +102,4 @@
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="defaultImage" width="960" height="600"/>
-    </resources>
 </document>
