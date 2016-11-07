@@ -25,18 +25,31 @@
                                     <constraint firstAttribute="width" secondItem="IDO-vQ-8N9" secondAttribute="height" multiplier="49:47" id="wuF-m2-lX9"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZd-ML-oO1">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZd-ML-oO1">
+                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="16"/>
+                                <color key="textColor" red="0.79731108435752196" green="1" blue="0.95249478729851655" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Km-lV-ye8">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Km-lV-ye8">
+                                <color key="backgroundColor" red="0.81949118589743586" green="0.74484427756359672" blue="0.77891289562264043" alpha="1" colorSpace="calibratedRGB"/>
                                 <date key="date" timeIntervalSinceReferenceDate="500103142.73112702">
                                     <!--2016-11-06 05:32:22 +0000-->
                                 </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-175010400">
+                                    <!--1995-06-16 10:00:00 +0000-->
+                                </date>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.7011556765969682" green="0.63862554794297866" blue="0.81949118589743586" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="highlightsToday" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changedDataPicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="B3i-Wy-bay"/>
+                                </connections>
                             </datePicker>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="IDO-vQ-8N9" secondAttribute="leading" id="KRW-yC-3WC"/>
                             <constraint firstItem="8Km-lV-ye8" firstAttribute="top" secondItem="DZd-ML-oO1" secondAttribute="bottom" constant="8" id="MpT-r2-GwJ"/>
@@ -51,6 +64,11 @@
                             <constraint firstAttribute="leadingMargin" secondItem="8Km-lV-ye8" secondAttribute="leading" id="x6V-SV-2pU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="apodImage" destination="IDO-vQ-8N9" id="sIz-HG-28z"/>
+                        <outlet property="apodLabel" destination="DZd-ML-oO1" id="sHx-LX-mb5"/>
+                        <outlet property="datePicker" destination="8Km-lV-ye8" id="wdE-AZ-Swp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

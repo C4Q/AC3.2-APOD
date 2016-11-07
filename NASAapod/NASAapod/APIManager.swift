@@ -8,13 +8,14 @@
 
 import Foundation
 
+
 class APIRequestManager {
     static let manager = APIRequestManager()
     private init() {}
-
     
-    func getData(endPoint: String, callback: @escaping (Data?) -> Void) {
-        guard let URL = URL(string: endPoint) else {return}
+    
+    func getData(endPoint: String, date: String, callback: @escaping (Data?) -> Void) {
+        guard let URL = URL(string: endPoint+date) else {return}
         let session = URLSession(configuration: URLSessionConfiguration.default)
         session.dataTask(with: URL) { (data: Data?, response: URLResponse?, error: Error?) in
             if error != nil {
@@ -23,6 +24,7 @@ class APIRequestManager {
             guard let validData = data else { return }
             callback(validData)
             }.resume()
-        
     }
+    
+ 
 }
