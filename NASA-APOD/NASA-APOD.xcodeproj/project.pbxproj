@@ -58,9 +58,9 @@
 		9E89046C1DCEBEAB00EADF35 /* NASA-APOD */ = {
 			isa = PBXGroup;
 			children = (
+				9E8904B91DCEC13700EADF35 /* Managers */,
 				9E8904B71DCEC11300EADF35 /* Models */,
 				9E8904BA1DCEC14000EADF35 /* View Controllers */,
-				9E8904B91DCEC13700EADF35 /* Managers */,
 				9E8904B81DCEC11F00EADF35 /* Supporting Files */,
 			);
 			path = "NASA-APOD";

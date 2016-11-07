@@ -33,24 +33,29 @@
                                     <action selector="dateSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yxq-Zr-NS2"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UI-5T-zRz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5UI-5T-zRz">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Btm-61-uJC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sf7-4L-AWc"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sf7-4L-AWc">
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uBU-Cu-yK2" appends="YES" id="wxc-Vt-j61"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5UI-5T-zRz" firstAttribute="top" secondItem="sf7-4L-AWc" secondAttribute="bottom" constant="8" id="1rj-hm-s0e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5UI-5T-zRz" secondAttribute="trailing" constant="8" id="7Od-Cg-UWY"/>
                             <constraint firstItem="npG-PN-wIJ" firstAttribute="top" secondItem="5UI-5T-zRz" secondAttribute="bottom" constant="8" id="TPv-St-IHb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sf7-4L-AWc" secondAttribute="trailing" constant="8" id="XFc-gP-trG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sf7-4L-AWc" secondAttribute="trailing" id="XFc-gP-trG"/>
                             <constraint firstItem="sf7-4L-AWc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="eqI-cI-mJX"/>
-                            <constraint firstItem="sf7-4L-AWc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="kqx-az-b2a"/>
+                            <constraint firstItem="sf7-4L-AWc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kqx-az-b2a"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="npG-PN-wIJ" secondAttribute="bottom" id="mhn-ya-aad"/>
                             <constraint firstItem="5UI-5T-zRz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="pad-bJ-rMJ"/>
                             <constraint firstAttribute="trailing" secondItem="npG-PN-wIJ" secondAttribute="trailing" id="vh0-VV-3Mq"/>
@@ -61,9 +66,15 @@
                         <outlet property="datePicker" destination="npG-PN-wIJ" id="lL0-Wh-yjR"/>
                         <outlet property="picImage" destination="sf7-4L-AWc" id="iOp-dr-nZi"/>
                         <outlet property="picLabel" destination="5UI-5T-zRz" id="Tmp-aX-fNV"/>
+                        <outlet property="tapGestureRecognizer" destination="uBU-Cu-yK2" id="f1m-Ia-sEJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uBU-Cu-yK2">
+                    <connections>
+                        <action selector="didPerformGesture:" destination="BYZ-38-t0r" id="ZI0-oO-dHl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="100.29985007496252"/>
         </scene>

@@ -13,6 +13,7 @@ enum APODModelParseError: Error {
 	case title(title: Any)
 	case explanation(exp: Any)
 	case url(url: Any)
+	case hdurl(hdurl: Any)
 	case media(type: Any)
 	case date(date: Any)
 	case image(image: Any)
@@ -23,17 +24,20 @@ class PicOfTheDay {
 	let explanation:	String
 	let url:			String
 	let media:			String //media_type
+//	let hdUrl:			String // not used in this project
 	
 	init(
 		title:			String,
 		explanation:	String,
 		url:			String,
 		media:			String
+//		hdUrl:			String
 		) {
 		self.title =		title
 		self.explanation =	explanation
 		self.url =			url
 		self.media =		media
+//		self.hdUrl =		hdUrl
 	}
 	
 	convenience init?(from dictionary: [String:AnyObject]) throws {
@@ -51,13 +55,18 @@ class PicOfTheDay {
 		
 		guard let media = dictionary["media_type"] as? String else {
 			throw APODModelParseError.media(type: dictionary["media_type"])
-			
 		}
+		
+//		guard let hdUrl = dictionary["hdurl"] as? String else {
+//			throw APODModelParseError.hdurl(hdurl: dictionary["hdurl"])
+//		}
+
 		
 		self.init(title:		title,
 		          explanation:	explanation,
 		          url:			url,
 		          media:		media
+//		          hdUrl:		hdUrl
 		)
 	}
 	
@@ -67,9 +76,8 @@ class PicOfTheDay {
 		do {
 			let jsonData: Any = try JSONSerialization.jsonObject(with: data, options: [])
 			
-			guard let response: [String : AnyObject] = jsonData as? [String : AnyObject]
-				/*let pic = response["Pic"] as? [String: AnyObject]*/ else {
-					throw APODModelParseError.results(json: jsonData)
+			guard let response: [String : AnyObject] = jsonData as? [String : AnyObject] else {
+				throw APODModelParseError.results(json: jsonData)
 			}
 			
 			if let pic = try PicOfTheDay(from: response) {
@@ -94,8 +102,7 @@ class PicOfTheDay {
 	
 }
 
-
-
+// Example calls and API references below
 /*
 date	YYYY-MM-DD	today	The date of the APOD image to retrieve
 hd	bool	False	Retrieve the URL for the high resolution image
