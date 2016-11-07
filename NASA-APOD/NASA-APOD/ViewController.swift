@@ -115,9 +115,10 @@ class ViewController: UIViewController {
 	
 	@IBAction func didPerformGesture(_ sender: UITapGestureRecognizer) {
 		if let dataLoaded = self.apod {
-			if dataLoaded[0].media != "image" {
+			if dataLoaded.count != 0 { if dataLoaded[0].media == "video" {
 				let urlString = URL(string: dataLoaded[0].url)
 				UIApplication.shared.open(urlString!)
+				}
 			}
 		}
 	}

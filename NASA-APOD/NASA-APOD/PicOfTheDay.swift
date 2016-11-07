@@ -42,19 +42,19 @@ class PicOfTheDay {
 	
 	convenience init?(from dictionary: [String:AnyObject]) throws {
 		guard let title = dictionary["title"] as? String else {
-			throw APODModelParseError.title(title: dictionary["title"])
+			throw APODModelParseError.title(title: dictionary["title"] as Any)
 		}
 		
 		guard let explanation = dictionary["explanation"] as? String else {
-			throw APODModelParseError.explanation(exp: dictionary["explanation"])
+			throw APODModelParseError.explanation(exp: dictionary["explanation"] as Any)
 		}
 		
 		guard let url = dictionary["url"] as? String else {
-			throw APODModelParseError.url(url: dictionary["url"])
+			throw APODModelParseError.url(url: dictionary["url"] as Any)
 		}
 		
 		guard let media = dictionary["media_type"] as? String else {
-			throw APODModelParseError.media(type: dictionary["media_type"])
+			throw APODModelParseError.media(type: dictionary["media_type"] as Any)
 		}
 		
 //		guard let hdUrl = dictionary["hdurl"] as? String else {
