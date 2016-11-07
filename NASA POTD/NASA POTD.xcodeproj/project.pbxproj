@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81A5301E1DCF7CCD00834ACB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A5301D1DCF7CCD00834ACB /* AppDelegate.swift */; };
+		81A530201DCF7CCD00834ACB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A5301F1DCF7CCD00834ACB /* ViewController.swift */; };
+		81A530231DCF7CCD00834ACB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A530211DCF7CCD00834ACB /* Main.storyboard */; };
+		81A530251DCF7CCD00834ACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A530241DCF7CCD00834ACB /* Assets.xcassets */; };
+		81A530281DCF7CCD00834ACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A530261DCF7CCD00834ACB /* LaunchScreen.storyboard */; };
+		81A530301DCF8BE800834ACB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A5302F1DCF8BE800834ACB /* APIManager.swift */; };
+		81A530321DCF8FCB00834ACB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A530311DCF8FCB00834ACB /* Photo.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		81A5301A1DCF7CCD00834ACB /* NASA POTD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA POTD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A5301D1DCF7CCD00834ACB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81A5301F1DCF7CCD00834ACB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81A530221DCF7CCD00834ACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		81A530241DCF7CCD00834ACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81A530271DCF7CCD00834ACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81A530291DCF7CCD00834ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81A5302F1DCF8BE800834ACB /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		81A530311DCF8FCB00834ACB /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81A530171DCF7CCD00834ACB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81A530111DCF7CCD00834ACB = {
+			isa = PBXGroup;
+			children = (
+				81A5301C1DCF7CCD00834ACB /* NASA POTD */,
+				81A5301B1DCF7CCD00834ACB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		81A5301B1DCF7CCD00834ACB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81A5301A1DCF7CCD00834ACB /* NASA POTD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81A5301C1DCF7CCD00834ACB /* NASA POTD */ = {
+			isa = PBXGroup;
+			children = (
+				81A5301D1DCF7CCD00834ACB /* AppDelegate.swift */,
+				81A5301F1DCF7CCD00834ACB /* ViewController.swift */,
+				81A530311DCF8FCB00834ACB /* Photo.swift */,
+				81A5302F1DCF8BE800834ACB /* APIManager.swift */,
+				81A530211DCF7CCD00834ACB /* Main.storyboard */,
+				81A530241DCF7CCD00834ACB /* Assets.xcassets */,
+				81A530261DCF7CCD00834ACB /* LaunchScreen.storyboard */,
+				81A530291DCF7CCD00834ACB /* Info.plist */,
+			);
+			path = "NASA POTD";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81A530191DCF7CCD00834ACB /* NASA POTD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81A5302C1DCF7CCD00834ACB /* Build configuration list for PBXNativeTarget "NASA POTD" */;
+			buildPhases = (
+				81A530161DCF7CCD00834ACB /* Sources */,
+				81A530171DCF7CCD00834ACB /* Frameworks */,
+				81A530181DCF7CCD00834ACB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NASA POTD";
+			productName = "NASA POTD";
+			productReference = 81A5301A1DCF7CCD00834ACB /* NASA POTD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81A530121DCF7CCD00834ACB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = C4Q;
+				TargetAttributes = {
+					81A530191DCF7CCD00834ACB = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 81A530151DCF7CCD00834ACB /* Build configuration list for PBXProject "NASA POTD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81A530111DCF7CCD00834ACB;
+			productRefGroup = 81A5301B1DCF7CCD00834ACB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81A530191DCF7CCD00834ACB /* NASA POTD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81A530181DCF7CCD00834ACB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81A530281DCF7CCD00834ACB /* LaunchScreen.storyboard in Resources */,
+				81A530251DCF7CCD00834ACB /* Assets.xcassets in Resources */,
+				81A530231DCF7CCD00834ACB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81A530161DCF7CCD00834ACB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81A530301DCF8BE800834ACB /* APIManager.swift in Sources */,
+				81A530321DCF8FCB00834ACB /* Photo.swift in Sources */,
+				81A530201DCF7CCD00834ACB /* ViewController.swift in Sources */,
+				81A5301E1DCF7CCD00834ACB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		81A530211DCF7CCD00834ACB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81A530221DCF7CCD00834ACB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		81A530261DCF7CCD00834ACB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81A530271DCF7CCD00834ACB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81A5302A1DCF7CCD00834ACB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81A5302B1DCF7CCD00834ACB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81A5302D1DCF7CCD00834ACB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NASA POTD/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nyc.c4q.liamkane.NASA-POTD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		81A5302E1DCF7CCD00834ACB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NASA POTD/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nyc.c4q.liamkane.NASA-POTD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81A530151DCF7CCD00834ACB /* Build configuration list for PBXProject "NASA POTD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81A5302A1DCF7CCD00834ACB /* Debug */,
+				81A5302B1DCF7CCD00834ACB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81A5302C1DCF7CCD00834ACB /* Build configuration list for PBXNativeTarget "NASA POTD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81A5302D1DCF7CCD00834ACB /* Debug */,
+				81A5302E1DCF7CCD00834ACB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81A530121DCF7CCD00834ACB /* Project object */;
+}
