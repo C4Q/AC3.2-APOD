@@ -12,6 +12,12 @@ enum handleParseData: Error {
     case results, jsonSerialization
 }
 
+//enum APODError: String, Error {
+//    case image = "Missing image"
+//    case noType = "No type information"
+//    case unsupportedType = "Unsupported type"
+//}
+
 class Nasa {
     let date: String
     let explanation: String
@@ -27,23 +33,20 @@ class Nasa {
         self.mediaType = mediaType
     }
     
-    static func generateNasa(data: Data?) -> [Nasa]? {
-        var nasaToReturn = [Nasa]()
+    static func generateNasa(data: Data?) -> Nasa? {
         
         do {
             let jsonData: Any = try JSONSerialization.jsonObject(with: data!, options: [])
             guard let response = jsonData as? [String:AnyObject] else { throw handleParseData.jsonSerialization }
-
                 guard let date = response["date"] as? String,
                     let explanation = response["explanation"] as? String,
                     let title = response["title"] as? String,
                     let url = response["url"] as? String,
                     let mediaType = response["media_type"] as? String else { throw handleParseData.results }
-            
-            nasaToReturn.append(Nasa(date: date, explanation: explanation, title: title, url: url, mediaType: mediaType))
+            return Nasa(date: date, explanation: explanation, title: title, url: url, mediaType: mediaType)
         } catch {
             print("Unknown parsing error at \(error)")
         }
-        return nasaToReturn
+        return nil
     }
 }
