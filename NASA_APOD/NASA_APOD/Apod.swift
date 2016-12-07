@@ -9,6 +9,7 @@
 import Foundation
 
 enum ApodModelParseError: Error {
+    case apodObject
     case dictionary
     case detail
     case copyright
@@ -22,7 +23,6 @@ enum ApodModelParseError: Error {
 }
 
 class Apod {
-    
     let copyright: String?
     let date: String
     let explanation: String?
@@ -43,51 +43,41 @@ class Apod {
         self.url = url
     }
     
+    convenience init? (dict: [String: Any]) throws {
+        guard let copyright = dict["copyright"] as? String? else { throw ApodModelParseError.copyright}
+        guard let date = dict["date"] as? String  else { throw ApodModelParseError.date}
+        guard let explanation = dict["explanation"] as? String? else { throw ApodModelParseError.explanation}
+        guard let hdurlString = dict["hdurl"] as? String? else { throw ApodModelParseError.hdurl}
+        guard let media_type = dict["media_type"] as? String else { throw ApodModelParseError.media_type}
+        guard let service_version = dict["service_version"] as? String? else { throw ApodModelParseError.service_version}
+        guard let title = dict["title"] as? String?  else { throw ApodModelParseError.title}
+        guard let urlString = dict["url"] as? String? else { throw ApodModelParseError.url}
+        //guard let hdurl = String(string: hdurlString) else {return nil}
+        //guard let url = String(string: urlString) else {return nil}
+        self.init(copyright: copyright, date: date, explanation: explanation, hdurl: hdurlString, media_type: media_type, service_version: service_version, title: title, url: urlString)
+    }
+    
     static func getAPOD (from data: Data) -> Apod? {
-        
         do {
-            let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
+            guard let jsonData = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+                throw ApodModelParseError.dictionary
+            }
             //dump(jsonData)
-            
-            guard let dictionary = jsonData as? [String:Any] else { throw ApodModelParseError.dictionary}
-            
-            guard let copyright = dictionary["copyright"] as? String? else { throw ApodModelParseError.copyright}
-            
-            guard let date = dictionary["date"] as? String  else { throw ApodModelParseError.date}
-            
-            guard let explanation = dictionary["explanation"] as? String? else { throw ApodModelParseError.explanation}
-            
-            guard let hdurlString = dictionary["hdurl"] as? String? else { throw ApodModelParseError.hdurl}
-            
-            guard let media_type = dictionary["media_type"] as? String else { throw ApodModelParseError.media_type}
-            
-            guard let service_version = dictionary["service_version"] as? String? else { throw ApodModelParseError.service_version}
-            
-            guard let title = dictionary["title"] as? String?  else { throw ApodModelParseError.title}
-            
-            guard let urlString = dictionary["url"] as? String? else { throw ApodModelParseError.url}
-            //
-            //            guard let hdurl = String(string: hdurlString) else {return nil}
-            //            guard let url = String(string: urlString) else {return nil}
-            
-            let a =  Apod(copyright: copyright, date: date, explanation: explanation, hdurl: hdurlString, media_type: media_type, service_version: service_version, title: title, url: urlString)
+            guard let a = try Apod(dict: jsonData) else {
+                throw ApodModelParseError.apodObject
+            }
             //dump(a)
             return a
-            
         }
-            
         catch ApodModelParseError.detail {
             print("error in casting detail")
         }
-            
         catch ApodModelParseError.dictionary{
             print("error in casting dictionary")
         }
-            
         catch {
             print(error)
         }
-        
         return nil
     }
     
