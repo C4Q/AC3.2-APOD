@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NASA_APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="npG-PN-wIJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="nkb-cn-NiL"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="500095222.51073998">
+                                    <!--2016-11-06 03:20:22 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-166543200">
+                                    <!--1995-09-22 10:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yxq-Zr-NS2"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5UI-5T-zRz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Btm-61-uJC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sf7-4L-AWc">
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uBU-Cu-yK2" appends="YES" id="wxc-Vt-j61"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5UI-5T-zRz" firstAttribute="top" secondItem="sf7-4L-AWc" secondAttribute="bottom" constant="8" id="1rj-hm-s0e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5UI-5T-zRz" secondAttribute="trailing" constant="8" id="7Od-Cg-UWY"/>
+                            <constraint firstItem="npG-PN-wIJ" firstAttribute="top" secondItem="5UI-5T-zRz" secondAttribute="bottom" constant="8" id="TPv-St-IHb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sf7-4L-AWc" secondAttribute="trailing" id="XFc-gP-trG"/>
+                            <constraint firstItem="sf7-4L-AWc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="eqI-cI-mJX"/>
+                            <constraint firstItem="sf7-4L-AWc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kqx-az-b2a"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="npG-PN-wIJ" secondAttribute="bottom" id="mhn-ya-aad"/>
+                            <constraint firstItem="5UI-5T-zRz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="pad-bJ-rMJ"/>
+                            <constraint firstAttribute="trailing" secondItem="npG-PN-wIJ" secondAttribute="trailing" id="vh0-VV-3Mq"/>
+                            <constraint firstItem="npG-PN-wIJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y5t-Bt-lLb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="npG-PN-wIJ" id="lL0-Wh-yjR"/>
+                        <outlet property="picImage" destination="sf7-4L-AWc" id="iOp-dr-nZi"/>
+                        <outlet property="picLabel" destination="5UI-5T-zRz" id="Tmp-aX-fNV"/>
+                        <outlet property="tapGestureRecognizer" destination="uBU-Cu-yK2" id="f1m-Ia-sEJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uBU-Cu-yK2">
+                    <connections>
+                        <action selector="didPerformGesture:" destination="BYZ-38-t0r" id="ZI0-oO-dHl"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="100.29985007496252"/>
+        </scene>
+    </scenes>
+</document>
