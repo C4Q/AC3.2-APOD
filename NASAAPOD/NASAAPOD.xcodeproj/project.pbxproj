@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B0D6B8E1DCE8A09000AA078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D6B8D1DCE8A09000AA078 /* AppDelegate.swift */; };
+		9B0D6B931DCE8A09000AA078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B0D6B911DCE8A09000AA078 /* Main.storyboard */; };
+		9B0D6B951DCE8A09000AA078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0D6B941DCE8A09000AA078 /* Assets.xcassets */; };
+		9B0D6B981DCE8A09000AA078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B0D6B961DCE8A09000AA078 /* LaunchScreen.storyboard */; };
+		9B0D6BA01DCE8A73000AA078 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D6B9F1DCE8A73000AA078 /* APIRequestManager.swift */; };
+		9B0D6BA21DCE8A88000AA078 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D6BA11DCE8A88000AA078 /* APOD.swift */; };
+		9B0D6BA41DCE90E3000AA078 /* APODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D6BA31DCE90E3000AA078 /* APODViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9B0D6B8A1DCE8A09000AA078 /* NASAAPOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAAPOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0D6B8D1DCE8A09000AA078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9B0D6B921DCE8A09000AA078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B0D6B941DCE8A09000AA078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B0D6B971DCE8A09000AA078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B0D6B991DCE8A09000AA078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B0D6B9F1DCE8A73000AA078 /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
+		9B0D6BA11DCE8A88000AA078 /* APOD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
+		9B0D6BA31DCE90E3000AA078 /* APODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APODViewController.swift; path = ../APODViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B0D6B871DCE8A09000AA078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B0D6B811DCE8A09000AA078 = {
+			isa = PBXGroup;
+			children = (
+				9B0D6B8C1DCE8A09000AA078 /* NASAAPOD */,
+				9B0D6B8B1DCE8A09000AA078 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B0D6B8B1DCE8A09000AA078 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B0D6B8A1DCE8A09000AA078 /* NASAAPOD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B0D6B8C1DCE8A09000AA078 /* NASAAPOD */ = {
+			isa = PBXGroup;
+			children = (
+				9B0D6B8D1DCE8A09000AA078 /* AppDelegate.swift */,
+				9B0D6BA31DCE90E3000AA078 /* APODViewController.swift */,
+				9B0D6B911DCE8A09000AA078 /* Main.storyboard */,
+				9B0D6B9F1DCE8A73000AA078 /* APIRequestManager.swift */,
+				9B0D6BA11DCE8A88000AA078 /* APOD.swift */,
+				9B0D6B941DCE8A09000AA078 /* Assets.xcassets */,
+				9B0D6B961DCE8A09000AA078 /* LaunchScreen.storyboard */,
+				9B0D6B991DCE8A09000AA078 /* Info.plist */,
+			);
+			path = NASAAPOD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B0D6B891DCE8A09000AA078 /* NASAAPOD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B0D6B9C1DCE8A09000AA078 /* Build configuration list for PBXNativeTarget "NASAAPOD" */;
+			buildPhases = (
+				9B0D6B861DCE8A09000AA078 /* Sources */,
+				9B0D6B871DCE8A09000AA078 /* Frameworks */,
+				9B0D6B881DCE8A09000AA078 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NASAAPOD;
+			productName = NASAAPOD;
+			productReference = 9B0D6B8A1DCE8A09000AA078 /* NASAAPOD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B0D6B821DCE8A09000AA078 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Madushani Lekam Wasam Liyanage";
+				TargetAttributes = {
+					9B0D6B891DCE8A09000AA078 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = G6ZU47QNTF;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9B0D6B851DCE8A09000AA078 /* Build configuration list for PBXProject "NASAAPOD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B0D6B811DCE8A09000AA078;
+			productRefGroup = 9B0D6B8B1DCE8A09000AA078 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B0D6B891DCE8A09000AA078 /* NASAAPOD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B0D6B881DCE8A09000AA078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B0D6B981DCE8A09000AA078 /* LaunchScreen.storyboard in Resources */,
+				9B0D6B951DCE8A09000AA078 /* Assets.xcassets in Resources */,
+				9B0D6B931DCE8A09000AA078 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B0D6B861DCE8A09000AA078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B0D6BA01DCE8A73000AA078 /* APIRequestManager.swift in Sources */,
+				9B0D6BA21DCE8A88000AA078 /* APOD.swift in Sources */,
+				9B0D6BA41DCE90E3000AA078 /* APODViewController.swift in Sources */,
+				9B0D6B8E1DCE8A09000AA078 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9B0D6B911DCE8A09000AA078 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B0D6B921DCE8A09000AA078 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9B0D6B961DCE8A09000AA078 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B0D6B971DCE8A09000AA078 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B0D6B9A1DCE8A09000AA078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B0D6B9B1DCE8A09000AA078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B0D6B9D1DCE8A09000AA078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G6ZU47QNTF;
+				INFOPLIST_FILE = NASAAPOD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.madushanilekamwasamliyanage.NASAAPOD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9B0D6B9E1DCE8A09000AA078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G6ZU47QNTF;
+				INFOPLIST_FILE = NASAAPOD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.madushanilekamwasamliyanage.NASAAPOD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B0D6B851DCE8A09000AA078 /* Build configuration list for PBXProject "NASAAPOD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B0D6B9A1DCE8A09000AA078 /* Debug */,
+				9B0D6B9B1DCE8A09000AA078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B0D6B9C1DCE8A09000AA078 /* Build configuration list for PBXNativeTarget "NASAAPOD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B0D6B9D1DCE8A09000AA078 /* Debug */,
+				9B0D6B9E1DCE8A09000AA078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B0D6B821DCE8A09000AA078 /* Project object */;
+}
